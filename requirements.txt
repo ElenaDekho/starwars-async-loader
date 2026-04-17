@@ -1,2 +1,5 @@
 aiohttp==3.13.5
 SQLAlchemy==1.4.54
+aiosqlite==0.22.1
+
+

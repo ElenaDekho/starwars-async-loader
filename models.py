@@ -1,6 +1,6 @@
-from sqlalchemy import Column, Integer, String, Float, create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+# models.py
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
 
@@ -17,3 +17,4 @@ class Character(Base):
     mass = Column(String)
     name = Column(String)
     skin_color = Column(String)
+
