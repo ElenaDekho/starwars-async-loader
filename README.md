@@ -34,26 +34,39 @@ python load_data.py
 ## 📁 Структура проекта
 
 starwars_async/
+
 ├── migrate.py           # Скрипт миграции (создание таблицы)
+
 ├── load_data.py         # Основной скрипт загрузки
+
 ├── models.py            # Модель Character (SQLAlchemy)
+
 ├── requirements.txt     # Зависимости
+
 ├── check_db.py          # Скрипт проверки целостности БД
+
 └── README.md
 
 ## 📊 Результат
 
 В базе starwars.db создаётся таблица characters
+
 Загружено 82 персонажа (все доступные в API)
+
 Поле homeworld содержит название планеты, а не URL
+
 Все обязательные поля заполнены: id, birth_year, eye_color, gender, hair_color, homeworld, mass, name, skin_color
 
 ## 📝 Примечания
 
 API: https://www.swapi.tech/api/people/
+
 Миграция использует create_all, что гарантирует безопасный повторный запуск без ошибок
+
 Сетевые запросы защищены механизмом retry (до 3 попыток с экспоненциальной задержкой)
+
 Загрузка происходит пачками по 3–5 персонажей с паузами, чтобы не перегружать API
+
 Файл starwars.db создаётся автоматически при первом запуске load_data_async.py
 
 
